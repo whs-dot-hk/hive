@@ -58,7 +58,7 @@
           loader = haumea.lib.loaders.scoped;
           transformer = with haumea.lib.transformers; [
             liftDefault
-            (hoistLists "_imports" "imports")
+            #(hoistLists "_imports" "imports")
           ];
           inputs = inputs';
         })
