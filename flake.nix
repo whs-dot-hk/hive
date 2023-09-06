@@ -58,8 +58,8 @@
           inherit src;
           loader = haumea.lib.loaders.scoped;
           transformer = with haumea.lib.transformers; [
+            (hoistLists "_imports" "imports")
             liftDefault
-            #(hoistLists "_imports" "imports")
           ];
           inputs = inputs';
         })
